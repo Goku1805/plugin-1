@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+		<div class="container">
+			<div class="sidebar">
+				<ul> 
+					<li><a id="all-appear" href="#">All</a></li>
+					<li><a id="honey-appear" href="#">Honey</a></li>
+					<li><a id="bees-appear" href="#">Bees</a></li>
+					<li><a id="farm-appear" href="#">Farm</a></li>
+
+				</ul>
+			</div>
+			<div class="content">
+				
+				<div class="all">
+				
+				<div class="Honey">
+					<h4>Honey Items<h4>
+				</div>
+				<div class="Bees">
+					<h4>Check Bees Species<h4>
+				</div>
+				<div class="Farm">
+					<h4>Our Farm<h4>
+				</div>
+				
+
+				</div>
+
+
+			</div>
+
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	
+	$("#all-appear").click(function(){
+			$(".all").children(".Honey,.Bees,.Farm").show();
+			console.log("function called");
+	});
+	
+	$("#honey-appear").click(function(){
+		$(".all").children(".Bees,.Farm").hide();
+		$(".Honey").show();
+	});
+	$("#bees-appear").click(function(){
+		$(".all").children(".Honey,.Farm").hide();
+		$(".Bees").show();
+	});
+	$("#farm-appear").click(function(){
+		$(".all").children(".Bees,.Honey").hide();
+		$(".Farm").show();
+	});
+
+
+
+</script>
+</body>
+</html>
